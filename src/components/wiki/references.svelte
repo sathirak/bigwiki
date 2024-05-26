@@ -24,7 +24,7 @@
   ];
 </script>
 
-<div class="flex gap-2 w-3/4">
+<div class="flex gap-2">
   {#each cards as card}
     <div class="relative rounded-md">  
       <img src={card.image} alt={card.title} class="rounded-md border-2 border-white object-cover"/>
