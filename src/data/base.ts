@@ -89,5 +89,8 @@ export const base = {
 				]
 			}
 		]
+	},
+	background:{
+		image_url: "/background.jpg"
 	}
 };

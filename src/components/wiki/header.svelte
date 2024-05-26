@@ -1,5 +1,4 @@
 <script>
-	import ThemeControl from "./theme.svelte";
 
 	export let icon;
 	export let title;
@@ -8,7 +7,7 @@
 </script>
 
 <div
-	class=" fixed z-10 flex w-full justify-between border-b p-4 text-lg font-medium opacity-100 glass"
+	class=" glass fixed z-10 flex w-full justify-between border-b p-4 text-lg font-medium opacity-100"
 	style="background: {bg_color};"
 >
 	<div class="flex gap-16">
@@ -29,9 +28,8 @@
 				</div>
 			{/each}
 		</nav>
-	</div>
 
-	<ThemeControl></ThemeControl>
+	</div>
 
 	<div>
 		<a href="https://bigwiki.org" class="w-max">
@@ -40,9 +38,8 @@
 		</a>
 	</div>
 </div>
-
+<div class="fixed h-14 w-full bg-white"></div>
 <div class="h-14 w-full"></div>
-
 
 <style>
 	.dropdown {

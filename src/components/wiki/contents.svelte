@@ -1,4 +1,6 @@
 <script>
+	import Control from './control.svelte';
+
 	const sections = [
 		'Summary',
 		'Story Impact',
@@ -9,13 +11,14 @@
 	];
 </script>
 
-<div class="h-inherit w-1/6 border-r p-6 bg-white dark:bg-gray-500">
-	<h2 class=" select-none">Contents</h2>
+<div class="h-inherit w-1/6 border-r bg-white p-6 dark:bg-gray-500">
+	<Control />
+	<h2 class=" select-none text-lg">Contents</h2>
 
 	<ul class="text-slate-700 dark:text-slate-50">
 		{#each Object.entries(sections) as [key, value]}
 			<li class="my-2">
-				<a href="#top" class=" hover:underline hover:text-slate-900">{value}</a>
+				<a href="#top" class=" hover:text-slate-900 hover:underline">{value}</a>
 			</li>
 		{/each}
 	</ul>

@@ -1,19 +1,28 @@
 <script>
-    const sections = {
-        'Volumes': '105-',
-        'Manga Chapters': '1058-',
-        'Anime Episodes': '1086-',
-        'Year(s) Released': '2022- (Manga) 2023- (Anime)',
-    };
+	export let info;
 </script>
 
-<div class="p-4 bg-slate-100 rounded-md w-1/3">
-    <ul class="text-slate-700">
-        {#each Object.entries(sections) as [key, value]}
-            <li class="my-2 flex gap-2 w-full text-sm">
-                <div class="w-1/3 font-medium">{key}</div>
-                <div class="w-2/3">{value}</div>
-            </li>
-        {/each}
-    </ul>
+<div class="w-1/3 rounded-r-md bg-white p-4">
+	{#each info as section}
+		<table class="mb-2 w-full border-b p-2 font-medium text-slate-600">
+			{#if section.head}
+				<thead>
+					<tr>
+						<th colspan={section.body[0].length} class="text-center font-medium text-slate-800"
+							>{section.head}</th
+						>
+					</tr>
+				</thead>
+			{/if}
+			<tbody>
+				{#each section.body as row}
+					<tr>
+						{#each row as cell}
+							<td class={row.length === 1 ? 'text-center' : 'text-left'}>{cell}</td>
+						{/each}
+					</tr>
+				{/each}
+			</tbody>
+		</table>
+	{/each}
 </div>

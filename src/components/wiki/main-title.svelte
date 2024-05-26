@@ -1,1 +1,0 @@
-<h2 class="mx-6 mt-4 text-3xl text-slate-600">Egghead Arc</h2>

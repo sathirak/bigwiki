@@ -1,5 +1,33 @@
 export const page = {
-    pagesrc:`# One Piece Fandom Page
+	tags: [
+		{ href: '/top', label: 'Story Arcs' },
+		{ href: '/egghead', label: 'Egghead Arc' },
+		{ href: '/vegapunk', label: 'Dr VegaPunk' },
+		{ href: '/wano-country-arc', label: 'Wano Country Arc' }
+	],
+	main: {
+		image: {
+			image: '/Egghead_Arc.webp',
+			image_alt: 'Image of Egghead Arc in One Piece',
+			title: 'Egghead Arc'
+		},
+		info: [
+			{
+				head: '',
+				body: [
+					['Volumes', '105-'],
+					['Manga Chapters', '1058-'],
+					['Anime Episodes', '1086-'],
+					['Year(s) Released', '2022- (Manga) 2023- (Anime)']
+				]
+			},
+			{
+				head: 'Previous Arc',
+				body: [['Wano Country Arc']]
+			}
+		]
+	},
+	pagesrc: `# One Piece Fandom Page
 
 ![One Piece Logo](https://picsum.photos/seed/picsum/200/100)
 
