@@ -1,32 +1,80 @@
 <script lang="ts">
-	export let content;
-	console.log('contents + ', content);
+	import { onMount } from 'svelte';
 
-	let headings: any;
+	export let content;
+
+	let headings: { text: string; depth: number; href: string }[] = [];
+	let activeHeading = '';
 
 	if (content) {
-		console.log('super contents + ', content);
-
-		headings = content.filter((item: { type: string }) => item.type === 'heading');
-
+		headings = content
+			.filter((item: { type: string; }) => item.type === 'heading')
+			.map((heading: { text: string; }) => {
+				return {
+					...heading,
+					href: heading.text.trim().replace(/\s+/g, '-').toLowerCase()
+				};
+			});
 		console.log('super headings + ', headings);
-
 	}
+
+	// Intersection Observer setup
+	let observer: any;
+
+	function observeSections() {
+		const options = {
+			root: null,
+			rootMargin: '0px',
+			threshold: 0.1
+		};
+
+		observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					activeHeading = entry.target.id;
+				}
+			});
+		}, options);
+
+		headings.forEach((heading) => {
+			const section = document.getElementById(heading.href);
+			if (section) {
+				observer.observe(section);
+			}
+		});
+	}
+
+	// Start observing when the component mounts
+	onMount(() => {
+		observeSections();
+		return () => {
+			if (observer) {
+				observer.disconnect();
+			}
+		};
+	});
 </script>
 
-<div class=" fixed h-full w-1/6 pb-2 pl-6 pt-8">
+<div class="fixed h-full w-1/6 pb-2 pl-6 pt-8">
 	<div class="flex items-center gap-2">
 		<h2 class="select-none py-2 text-lg">Navigation</h2>
 	</div>
 
-	<ul class="content-list my-2 h-[65%] overflow-y-scroll text-slate-700 dark:text-slate-50">
-		{#if headings}
-			{#each Object.entries(headings) as [key, value]}
-				<li class="my-2">
-					<a href={"#" + value.text.replace(" ", "-")} class=" hover:text-slate-900 hover:underline">{value.text}</a>
-				</li>
-			{/each}
-		{/if}
+	<ul
+		class="content-list my-2 h-[65%] overflow-x-hidden overflow-y-scroll text-slate-700 dark:text-slate-50"
+	>
+		{#each headings as heading}
+			<li style="margin-left: {(heading.depth - 1) * 14}px;">
+				<a
+					href={'#' + heading.href}
+					class:active={activeHeading === heading.href}
+					class="overflow-ellipsis whitespace-nowrap hover:text-slate-900 hover:underline"
+				>
+					{#if heading.depth < 3}#{/if}
+					{heading.text}
+				</a>
+			</li>
+		{/each}
 	</ul>
 </div>
 
@@ -35,5 +83,10 @@
 <style>
 	.content-list {
 		scrollbar-color: rgb(225, 225, 225) rgb(246, 245, 245);
+		scrollbar-width: thin;
 	}
+	.active {
+		background-color: lightgray;
+	}
+
 </style>
