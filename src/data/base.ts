@@ -90,7 +90,27 @@ export const base = {
 			}
 		]
 	},
-	background:{
-		image_url: "/background.jpg"
+	background: {
+		image_url: '/background.jpg'
+	},
+	footer: {
+		menu: [
+			{
+				label: 'Overview',
+				link: '/Link'
+			},
+			{
+				label: 'World',
+				link: '/Link'
+			},
+			{
+				label: 'Media',
+				link: '/Link'
+			},
+			{
+				label: 'Community',
+				link: '/Link'
+			}
+		]
 	}
 };

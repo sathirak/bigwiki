@@ -68,7 +68,7 @@
 				<a
 					href={'#' + heading.href}
 					class:active={activeHeading === heading.href}
-					class="overflow-ellipsis whitespace-nowrap hover:text-slate-900 hover:underline"
+					class="overflow-ellipsis whitespace-nowrap hover:text-slate-900 hover:underline px-2"
 				>
 					{#if heading.depth < 3}#{/if}
 					{heading.text}
@@ -86,7 +86,7 @@
 		scrollbar-width: thin;
 	}
 	.active {
-		background-color: lightgray;
+		background-color: rgb(236, 236, 236);
 	}
 
 </style>

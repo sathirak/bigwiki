@@ -16,4 +16,4 @@
 
 <slot></slot>
 
-<Footer />
+<Footer menu={base.footer.menu}/>

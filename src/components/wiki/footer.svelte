@@ -1,15 +1,9 @@
-<div class=" flex w-full gap-16 border-b p-4 text-lg font-medium bg-cyan-50">
+<script lang="ts">
+	export let menu;
+</script>
 
-	<nav class="hidden gap-8 md:flex">
-		<button>Explore</button>
-		<button>World</button>
-		<button>Media</button>
-		<button>Community</button>
-	</nav>
-	<nav class="gap-6 bg-red-400 md:hidden">
-		<button>Explore</button>
-		<button>World</button>
-		<button>Media</button>
-		<button>Community</button>
-	</nav>
+<div class=" flex justify-center w-full gap-16 border-b bg-cyan-50 p-4 text-lg font-medium">
+	{#each menu as menu_item}
+		<a href={menu_item.link}>{menu_item.label}</a>
+	{/each}
 </div>

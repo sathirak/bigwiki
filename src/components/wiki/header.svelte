@@ -20,9 +20,9 @@
 			{#each menu as menuItem}
 				<div class="dropdown">
 					<button class="dropbtn">{menuItem.label}</button>
-					<div class="dropdown-content">
+					<div class="hidden absolute z-1 dropdown-content bg-white">
 						{#each menuItem.items as item}
-							<a href={item.link}>{item.label}</a>
+							<a class=" px-4 py-2 block decoration-0 hover:bg-slate-100" href={item.link}>{item.label}</a>
 						{/each}
 					</div>
 				</div>
@@ -45,25 +45,6 @@
 	.dropdown {
 		position: relative;
 		display: inline-block;
-	}
-
-	.dropdown-content {
-		display: none;
-		position: absolute;
-		background-color: #f9f9f9;
-		min-width: 160px;
-		z-index: 1;
-	}
-
-	.dropdown-content a {
-		color: black;
-		padding: 12px 16px;
-		text-decoration: none;
-		display: block;
-	}
-
-	.dropdown-content a:hover {
-		background-color: #f1f1f1;
 	}
 
 	.dropdown:hover .dropdown-content {
