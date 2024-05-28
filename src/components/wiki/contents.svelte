@@ -24,8 +24,8 @@
 	function observeSections() {
 		const options = {
 			root: null,
-			rootMargin: '0px',
-			threshold: 0.1
+			rootMargin: '70px',
+			threshold: 0.5
 		};
 
 		observer = new IntersectionObserver((entries) => {
