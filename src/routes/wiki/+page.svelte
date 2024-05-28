@@ -1,16 +1,16 @@
 <script lang="ts">
 	import { page } from '../../data/egghead-arc';
 
-	import ParagraphComp from '../../components/markdown/paragraph.svelte';
-	import HeadingComp from '../../components/markdown/heading.svelte';
-	import Image from '../../components/markdown/image.svelte';
-	import Link from '../../components/markdown/link.svelte';
+	import ParagraphComp from '$components/markdown/paragraph.svelte';
+	import HeadingComp from '$components/markdown/heading.svelte';
+	import Image from '$components/markdown/image.svelte';
+	import Link from '$components/markdown/link.svelte';
 
-	import Contents from '../../components/wiki/contents.svelte';
-	import MainImage from '../../components/wiki/main-image.svelte';
-	import MainInfo from '../../components/wiki/main-info.svelte';
-	import Tags from '../../components/wiki/tags.svelte';
-	import References from '../../components/wiki/references.svelte';
+	import Contents from '$components/wiki/contents.svelte';
+	import MainImage from '$components/wiki/main-image.svelte';
+	import MainInfo from '$components/wiki/main-info.svelte';
+	import Tags from '$components/wiki/tags.svelte';
+	import References from '$components/wiki/references.svelte';
 
 	import SvelteMarkdown from 'svelte-markdown';
 	import type TokensList from 'svelte-markdown';

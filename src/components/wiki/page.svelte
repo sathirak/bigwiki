@@ -1,11 +1,11 @@
 <script>
 	import { page } from '../../data/egghead-arc';
 
-	import Contents from '../../components/wiki/contents.svelte';
-	import MainImage from '../../components/wiki/main-image.svelte';
-	import MainInfo from '../../components/wiki/main-info.svelte';
-	import Tags from '../../components/wiki/tags.svelte';
-	import References from '../../components/wiki/references.svelte';
+	import Contents from '$components/wiki/contents.svelte';
+	import MainImage from '$components/wiki/main-image.svelte';
+	import MainInfo from '$components/wiki/main-info.svelte';
+	import Tags from '$components/wiki/tags.svelte';
+	import References from '$components/wiki/references.svelte';
 
     export let content;
 </script>
