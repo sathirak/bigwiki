@@ -1,9 +1,9 @@
 <script>
-	import { base } from '../../data/base';
+	import { base } from '$src/data/base';
 
-	import Header from '$components/wiki/header.svelte';
-	import Footer from '$components/wiki/footer.svelte';
-	import BackgroundImage from '$components/wiki/background.svelte';
+	import Header from '$components/wiki/layout/header.svelte';
+	import Footer from '$components/wiki/layout/footer.svelte';
+	import BackgroundImage from '$components/wiki/layout/background.svelte';
 </script>
 
 <Header
@@ -12,6 +12,7 @@
 	title={base.header.title}
 	menu={base.header.menu}
 />
+
 <BackgroundImage imageUrl={base.background.image_url} />
 
 <slot></slot>
