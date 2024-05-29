@@ -11,6 +11,7 @@
 	import MainInfo from '$components/wiki/main-info.svelte';
 	import Tags from '$components/wiki/tags.svelte';
 	import References from '$components/wiki/references.svelte';
+	import Command from '$components/wiki/command.svelte'
 
 	import SvelteMarkdown from 'svelte-markdown';
 	import type TokensList from 'svelte-markdown';
