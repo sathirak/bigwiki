@@ -8,8 +8,8 @@
 
 	if (content) {
 		headings = content
-			.filter((item: { type: string; }) => item.type === 'heading')
-			.map((heading: { text: string; }) => {
+			.filter((item: { type: string }) => item.type === 'heading')
+			.map((heading: { text: string }) => {
 				return {
 					...heading,
 					href: heading.text.trim().replace(/\s+/g, '-').toLowerCase()
@@ -18,7 +18,7 @@
 		console.log('super headings + ', headings);
 	}
 
-	// Intersection Observer setup
+	// Intersection Observer setup to highlight the part from content page	
 	let observer: any;
 
 	function observeSections() {
@@ -68,7 +68,7 @@
 				<a
 					href={'#' + heading.href}
 					class:active={activeHeading === heading.href}
-					class="overflow-ellipsis whitespace-nowrap hover:text-slate-900 hover:underline px-2"
+					class="overflow-ellipsis whitespace-nowrap px-2 hover:text-slate-900 hover:underline"
 				>
 					{#if heading.depth < 3}#{/if}
 					{heading.text}
@@ -88,5 +88,4 @@
 	.active {
 		background-color: rgb(236, 236, 236);
 	}
-
 </style>

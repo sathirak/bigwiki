@@ -1,5 +1,4 @@
 <script>
-
 	export let icon;
 	export let title;
 	export let bg_color;
@@ -20,15 +19,16 @@
 			{#each menu as menuItem}
 				<div class="dropdown">
 					<button class="dropbtn">{menuItem.label}</button>
-					<div class="hidden absolute z-1 dropdown-content bg-white">
+					<div class="z-1 dropdown-content absolute hidden bg-white">
 						{#each menuItem.items as item}
-							<a class=" px-4 py-2 block decoration-0 hover:bg-slate-100" href={item.link}>{item.label}</a>
+							<a class=" block px-4 py-2 decoration-0 hover:bg-slate-100" href={item.link}
+								>{item.label}</a
+							>
 						{/each}
 					</div>
 				</div>
 			{/each}
 		</nav>
-
 	</div>
 
 	<div>
