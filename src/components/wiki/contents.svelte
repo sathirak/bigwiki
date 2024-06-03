@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 
 	export let content;
+	export let border;
 
 	let headings: { text: string; depth: number; href: string }[] = [];
 	let activeHeading = '';
@@ -70,7 +71,6 @@
 					class:active={activeHeading === heading.href}
 					class="overflow-ellipsis whitespace-nowrap px-2 hover:text-slate-900 hover:underline"
 				>
-					{#if heading.depth < 3}#{/if}
 					{heading.text}
 				</a>
 			</li>
@@ -78,17 +78,14 @@
 	</ul>
 </div>
 
-<div class="w-1/6 border-r-2 border-cyan-700 bg-white dark:bg-gray-500"></div>
+<div class="w-1/6 border-r-2 bg-white dark:bg-gray-500" style="border-color: {border.color};"></div>
 
 <style>
 	.content-list {
-		scrollbar-color: rgb(225, 225, 225) rgb(246, 245, 245);
 		margin-inline-end: 4px;
 		scrollbar-width: thin;
 	}
 	.active {
 		text-decoration: underline;
-		text-decoration-style: wavy;
-		text-underline-offset: 3px;
 	}
 </style>

@@ -1,11 +1,11 @@
 <script>
 	export let icon;
 	export let title;
-	// export let bg_color;
+	export let border;
 	export let menu;
 </script>
 
-<div class=" fixed z-10 flex w-full justify-between p-4 text-lg font-medium opacity-100 bg-white border-cyan-700 border-b-2">
+<div class=" fixed z-10 flex w-full justify-between p-4 text-lg font-medium opacity-100 bg-white border-b-2" style="border-color: {border.color};">
 	<div class="flex gap-16">
 		<div class="flex gap-4">
 			<img src={icon} class=" w-6 object-cover" alt="" srcset="" />
@@ -16,7 +16,7 @@
 			{#each menu as menuItem}
 				<div class="dropdown">
 					<button class="dropbtn">{menuItem.label}</button>
-					<div class="z-1 dropdown-content absolute hidden bg-white border-2 border-cyan-700">
+					<div class="z-1 dropdown-content absolute hidden bg-white border-2" style="border-color: {border.color};">
 						{#each menuItem.items as item}
 							<a class=" block px-4 py-2 decoration-0 hover:bg-slate-100" href={item.link}
 								>{item.label}</a

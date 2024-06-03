@@ -10,10 +10,11 @@
 	icon={base.header.icon}
 	title={base.header.title}
 	menu={base.header.menu}
+	border={base.body.border}
 />
 
 <BackgroundImage imageUrl={base.background.image_url} />
 
 <slot></slot>
 
-<Footer menu={base.footer.menu}/>
+<Footer menu={base.footer.menu} border={base.body.border} />
