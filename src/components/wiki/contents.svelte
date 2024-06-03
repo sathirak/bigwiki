@@ -18,7 +18,7 @@
 		console.log('super headings + ', headings);
 	}
 
-	// Intersection Observer setup to highlight the part from content page	
+	// Intersection Observer setup to highlight the part from content page
 	let observer: any;
 
 	function observeSections() {
@@ -78,14 +78,17 @@
 	</ul>
 </div>
 
-<div class="my-6 w-1/6 rounded-r-md bg-white dark:bg-gray-500"></div>
+<div class="w-1/6 border-r-2 border-cyan-700 bg-white dark:bg-gray-500"></div>
 
 <style>
 	.content-list {
 		scrollbar-color: rgb(225, 225, 225) rgb(246, 245, 245);
+		margin-inline-end: 4px;
 		scrollbar-width: thin;
 	}
 	.active {
-		background-color: rgb(236, 236, 236);
+		text-decoration: underline;
+		text-decoration-style: wavy;
+		text-underline-offset: 3px;
 	}
 </style>

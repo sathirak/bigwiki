@@ -8,7 +8,6 @@
 
 <Header
 	icon={base.header.icon}
-	bg_color={base.header.bg_color}
 	title={base.header.title}
 	menu={base.header.menu}
 />
