@@ -1,8 +1,12 @@
 export const base = {
+	body: {
+		border: {
+			color: 'rgb(14, 116, 144)'
+		}
+	},
 	header: {
 		icon: '/one-piece.png',
 		title: 'One Piece Wiki',
-		bg_color: 'hsl(186.56deg 71.11% 82.35% / 29%)',
 		menu: [
 			{
 				label: 'Explore',
@@ -96,20 +100,20 @@ export const base = {
 	footer: {
 		menu: [
 			{
-				label: 'Overview',
-				link: '/Link'
+				label: 'Privacy Policy',
+				link: '/privacy-policy'
 			},
 			{
-				label: 'World',
-				link: '/Link'
+				label: 'About BigWiki',
+				link: '/about'
 			},
 			{
-				label: 'Media',
-				link: '/Link'
+				label: 'Contact',
+				link: '/contact'
 			},
 			{
-				label: 'Community',
-				link: '/Link'
+				label: 'Code of Conduct',
+				link: '/code-of-conduct'
 			}
 		]
 	}

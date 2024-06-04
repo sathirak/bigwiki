@@ -27,3 +27,7 @@
 ## DB structure
 
 - All websites are loaded from DB data (currently can bee seen in the data/ dir), maybe routed through Redis if high traffic
+
+
+
+![Wiki page](Readme/wiki-page.png)

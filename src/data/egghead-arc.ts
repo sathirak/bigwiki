@@ -27,6 +27,33 @@ export const page = {
 			}
 		]
 	},
+	references: [
+		{
+			title: 'Monkey D. Luffy',
+			href: '/wiki/monkey-d-luffy',
+			image: 'https://via.placeholder.com/150?text=Luffy'
+		},
+		{
+			title: 'Roronoa Zoro',
+			href: '/wiki/monkey-d-luffy',
+			image: 'https://via.placeholder.com/150?text=Zoro'
+		},
+		{
+			title: 'Nami',
+			href: '/wiki/monkey-d-luffy',
+			image: 'https://via.placeholder.com/150?text=Nami'
+		},
+		{
+			title: 'Thousand Sunny',
+			href: '/wiki/monkey-d-luffy',
+			image: 'https://via.placeholder.com/150?text=Sunny'
+		},
+		{
+			title: 'Marineford',
+			href: '/wiki/monkey-d-luffy',
+			image: 'https://via.placeholder.com/150?text=Marineford'
+		}
+	],
 	pagesrc: `# One Piece Fandom Page
 
 ![One Piece Logo](https://picsum.photos/seed/picsum/200/100)

@@ -11,5 +11,5 @@
 	src={image}
 	alt={image_alt}
 	srcset=""
-	class="h-80 w-2/3 rounded-l-md border-2 border-white object-cover"
+	class="h-80 w-2/3 border-2 border-white object-cover"
 />

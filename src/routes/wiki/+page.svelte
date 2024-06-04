@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { page } from '../../data/egghead-arc';
+	import { page } from '$src/data/egghead-arc';
+	import { base } from '$src/data/base';
 
 	import ParagraphComp from '$components/markdown/paragraph.svelte';
 	import HeadingComp from '$components/markdown/heading.svelte';
@@ -21,16 +22,15 @@
 		console.log(event.detail.tokens);
 		content = event.detail.tokens;
 	}
-
 </script>
 
 <main class="flex">
 	{#if content}
-		<Contents {content} />
+		<Contents {content} border={base.body.border}/>
 	{/if}
-	<div class="flex w-2/3 flex-col gap-4 p-6">
-		<Tags tags={page.tags} />
-		<div class="flex flex-1">
+	<div class="flex w-2/3 flex-col gap-6 p-6">
+		<Tags tags={page.tags} border={base.body.border}/>
+		<div class="flex flex-1 border-2" style="border-color: {base.body.border.color};">
 			<MainImage
 				image={page.main.image.image}
 				image_alt={page.main.image.image_alt}
@@ -38,8 +38,8 @@
 			/>
 			<MainInfo info={page.main.info} />
 		</div>
-		<References />
-		<section class=" rounded-md bg-white px-6 py-6">
+		<References references={page.references} border={base.body.border}/>
+		<section class=" border-2 bg-white px-6 py-6" style="border-color: {base.body.border.color};">
 			<SvelteMarkdown
 				source={page.pagesrc}
 				on:parsed={handleParsed}
