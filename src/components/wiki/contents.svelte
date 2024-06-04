@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import markdownToFragment from '$lib/functions/markdown-to-url'
 
 	export let content;
 	export let border;
@@ -13,10 +14,9 @@
 			.map((heading: { text: string }) => {
 				return {
 					...heading,
-					href: heading.text.trim().replace(/\s+/g, '-').toLowerCase()
+					href: markdownToFragment({text: heading.text})
 				};
 			});
-		console.log('super headings + ', headings);
 	}
 
 	// Intersection Observer setup to highlight the part from content page
@@ -87,5 +87,6 @@
 	}
 	.active {
 		text-decoration: underline;
+		font-weight: 600;
 	}
 </style>

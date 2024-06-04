@@ -1,11 +1,11 @@
-<script>
-  export let href = "";
-  export let title = undefined;
-  export let text = "";
+<script lang="ts">
+  export let href: string;
+  export let title: string;
+  export let text: string;
 </script>
 
 <img
-class="rounded-md float-left mr-4"
+class=" float-left mr-4"
   src={href}
   {title}
   alt={text}

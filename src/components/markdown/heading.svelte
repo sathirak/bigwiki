@@ -1,8 +1,10 @@
-<script>
-	export let depth;
-	export let text;
+<script lang="ts">
+	export let depth: number;
+	export let text: string;
+	import markdownToFragment from '$lib/functions/markdown-to-url';
+
 	// This formatting can be als seen on contents page
-	const href = text.trim().replace(/\s+/g, '-').toLowerCase();
+	const href = markdownToFragment({text: text});
 </script>
 
 <a href="#{href}">

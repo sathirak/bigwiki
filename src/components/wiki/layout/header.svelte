@@ -3,9 +3,14 @@
 	export let title;
 	export let border;
 	export let menu;
+
+	import Dropdown from '$components/wiki/layout/dropdown.svelte';
 </script>
 
-<div class=" fixed z-10 flex w-full justify-between p-4 text-lg font-medium opacity-100 bg-white border-b-2" style="border-color: {border.color};">
+<div
+	class=" fixed z-10 flex w-full justify-between border-b-2 bg-white p-4 text-lg font-medium opacity-100"
+	style="border-color: {border.color};"
+>
 	<div class="flex gap-16">
 		<div class="flex gap-4">
 			<img src={icon} class=" w-6 object-cover" alt="" srcset="" />
@@ -13,17 +18,8 @@
 		</div>
 
 		<nav class="hidden gap-8 md:flex">
-			{#each menu as menuItem}
-				<div class="dropdown">
-					<button class="dropbtn">{menuItem.label}</button>
-					<div class="z-1 dropdown-content absolute hidden bg-white border-2" style="border-color: {border.color};">
-						{#each menuItem.items as item}
-							<a class=" block px-4 py-2 decoration-0 hover:bg-slate-100" href={item.link}
-								>{item.label}</a
-							>
-						{/each}
-					</div>
-				</div>
+			{#each menu as menu_item}
+				<Dropdown {menu_item} {border} />
 			{/each}
 		</nav>
 	</div>
@@ -37,14 +33,3 @@
 </div>
 <div class="fixed h-14 w-full"></div>
 <div class="h-14 w-full"></div>
-
-<style>
-	.dropdown {
-		position: relative;
-		display: inline-block;
-	}
-
-	.dropdown:hover .dropdown-content {
-		display: block;
-	}
-</style>
