@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class=" flex w-full justify-center gap-16 border-b border-t-2 bg-white p-4 text-lg font-medium"
+	class=" flex w-full justify-center gap-16 border-b border-t-2 p-4 text-lg font-medium text-text bg-secondary"
 	style="border-color: {border.color};"
 >
 	{#each menu as menu_item}

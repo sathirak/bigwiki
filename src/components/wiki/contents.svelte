@@ -58,18 +58,18 @@
 
 <div class="fixed h-full w-1/6 pb-2 pl-6 pt-8">
 	<div class="flex items-center gap-2">
-		<h2 class="select-none py-2 text-lg">Navigation</h2>
+		<h2 class="select-none py-2 text-lg text-text">Navigation</h2>
 	</div>
 
 	<ul
-		class="content-list my-2 h-[65%] overflow-x-hidden overflow-y-scroll text-slate-700 dark:text-slate-50"
+		class="content-list my-2 h-[65%] overflow-x-hidden overflow-y-scroll text-text "
 	>
 		{#each headings as heading}
 			<li style="margin-left: {(heading.depth - 1) * 14}px;">
 				<a
 					href={'#' + heading.href}
 					class:active={activeHeading === heading.href}
-					class="overflow-ellipsis whitespace-nowrap px-2 hover:text-slate-900 hover:underline"
+					class="overflow-ellipsis whitespace-nowrap px-2 hover:underline"
 				>
 					{heading.text}
 				</a>
@@ -78,7 +78,7 @@
 	</ul>
 </div>
 
-<div class="w-1/6 border-r-2 bg-white dark:bg-gray-500" style="border-color: {border.color};"></div>
+<div class="w-1/6 border-r-2 bg-secondary" style="border-color: {border.color};"></div>
 
 <style>
 	.content-list {

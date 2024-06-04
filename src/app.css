@@ -5,12 +5,46 @@
 @layer base {
 	html {
 		font-family: 'Mier B', system-ui, sans-serif;
-		scrollbar-color: rgb(14, 116, 144) rgb(255, 255, 255);
+		scrollbar-color: rgb(14, 116, 144) hsl(var(--secondary));
 	}
-}
 
-.glass {
-	backdrop-filter: blur(5.9px);
-	-webkit-backdrop-filter: blur(5.9px);
-	border: 1px solid rgba(255, 255, 255, 0.32);
+	:root {
+		--primary: 220.9 39.3% 11%;
+		--primary-foreground: 210 20% 98%;
+
+		--text: 220.9 39.3% 11%;
+		--text-foreground: 210 20% 98%;
+
+		--secondary: 0 0% 100%;
+		--secondary-foreground: 220.9 39.3% 11%;
+
+		--muted: 220 14.3% 95.9%;
+		--muted-foreground: 220 8.9% 46.1%;
+
+		--accent: 220 14.3% 95.9%;
+		--accent-foreground: 220.9 39.3% 11%;
+
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 210 20% 98%;
+	}
+
+	.dark {
+		--primary: 210 20% 98%;
+		--primary-foreground: 220.9 39.3% 11%;
+
+		--text: 210 20% 98%;
+		--text-foreground: 220.9 39.3% 11%;
+
+		--secondary: 215 27.9% 16.9%;
+		--secondary-foreground: 210 20% 98%;
+
+		--muted: 215 27.9% 16.9%;
+		--muted-foreground: 217.9 10.6% 64.9%;
+
+		--accent: 215 27.9% 16.9%;
+		--accent-foreground: 210 20% 98%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 210 20% 98%;
+	}
 }

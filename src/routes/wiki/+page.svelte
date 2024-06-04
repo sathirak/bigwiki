@@ -39,7 +39,7 @@
 			<MainInfo info={page.main.info} />
 		</div>
 		<References references={page.references} border={base.body.border}/>
-		<section class=" border-2 bg-white px-6 py-6" style="border-color: {base.body.border.color};">
+		<section class=" border-2 bg-secondary px-6 py-6" style="border-color: {base.body.border.color};">
 			<SvelteMarkdown
 				source={page.pagesrc}
 				on:parsed={handleParsed}

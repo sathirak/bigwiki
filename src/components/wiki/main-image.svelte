@@ -4,12 +4,12 @@
 	export let title;
 </script>
 
-<h1 class="absolute mt-4 bg-white px-4 py-2 text-3xl text-slate-600 ">
+<h1 class="bg-secondary text-text absolute mt-4 px-4 py-2 text-3xl">
 	{title}
 </h1>
 <img
 	src={image}
 	alt={image_alt}
 	srcset=""
-	class="h-80 w-2/3 border-2 border-white object-cover"
+	class="border-secondary h-80 w-2/3 border-2 object-cover"
 />

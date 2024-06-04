@@ -7,8 +7,8 @@
 	{#each references as reference}
 		<a href={reference.href} class="w-full">
 			<div class="relative w-full">
-				<img src={reference.image} alt={reference.title} class="w-full border-2 border-white object-cover" />
-				<h3 class="absolute bottom-0 w-full bg-white ps-2 text-center text-lg">{reference.title}</h3>
+				<img src={reference.image} alt={reference.title} class="w-full border-2 border-secondary object-cover" />
+				<h3 class="absolute bottom-0 w-full bg-secondary text-text ps-2 text-center text-lg">{reference.title}</h3>
 			</div>
 		</a>
 	{/each}

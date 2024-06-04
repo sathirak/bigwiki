@@ -5,10 +5,11 @@
 	export let menu;
 
 	import Dropdown from '$components/wiki/layout/dropdown.svelte';
+	import Theme from '$components/wiki/theme.svelte'
 </script>
 
 <div
-	class=" fixed z-10 flex w-full justify-between border-b-2 bg-white p-4 text-lg font-medium opacity-100"
+	class="fixed z-10 flex w-full justify-between border-b-2 bg-secondary text-text p-4 text-lg font-medium opacity-100"
 	style="border-color: {border.color};"
 >
 	<div class="flex gap-16">
@@ -23,6 +24,8 @@
 			{/each}
 		</nav>
 	</div>
+
+	<Theme/>
 
 	<div>
 		<a href="https://bigwiki.org" class="w-max">

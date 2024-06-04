@@ -3,9 +3,9 @@
 	export let title = undefined;
 </script>
 
-<a {href} {title} class="link text-slate-500 underline">
+<a {href} {title} class="link text-text-500 underline">
 	<slot></slot>
-	<div class="popup size-24 bg-slate-400 z-10">
+	<div class="popup size-24 bg-secondary z-10">
 		<img src="/link.png" alt="" srcset="" />
 	</div>
 </a>
