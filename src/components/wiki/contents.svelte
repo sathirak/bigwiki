@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import markdownToFragment from '$lib/functions/markdown-to-url'
+	import markdownToFragment from '$lib/functions/markdown-to-url';
 
 	export let content;
 	export let border;
@@ -14,7 +14,7 @@
 			.map((heading: { text: string }) => {
 				return {
 					...heading,
-					href: markdownToFragment({text: heading.text})
+					href: markdownToFragment({ text: heading.text })
 				};
 			});
 	}
@@ -56,20 +56,14 @@
 	});
 </script>
 
-<div class="fixed h-full w-1/6 pb-2 pl-6 pt-8">
-	<div class="flex items-center gap-2">
-		<h2 class="select-none py-2 text-lg text-text">Navigation</h2>
-	</div>
-
-	<ul
-		class="content-list my-2 h-[65%] overflow-x-hidden overflow-y-scroll text-text "
-	>
+<div class="h-full w-1/5 sticky top-24 left-4">
+	<ul class="content-list my-2 h-[65%] overflow-x-hidden overflow-y-scroll flex flex-col justify-center">
 		{#each headings as heading}
 			<li style="margin-left: {(heading.depth - 1) * 14}px;">
 				<a
 					href={'#' + heading.href}
 					class:active={activeHeading === heading.href}
-					class="overflow-ellipsis whitespace-nowrap px-2 hover:underline"
+					class="overflow-ellipsis whitespace-nowrap px-2 text-muted-foreground hover:underline"
 				>
 					{heading.text}
 				</a>
@@ -78,15 +72,11 @@
 	</ul>
 </div>
 
-<div class="w-1/6 border-r-2 bg-secondary" style="border-color: {border.color};"></div>
-
 <style>
 	.content-list {
-		margin-inline-end: 4px;
 		scrollbar-width: thin;
 	}
 	.active {
-		text-decoration: underline;
-		font-weight: 600;
+		color: black;
 	}
 </style>

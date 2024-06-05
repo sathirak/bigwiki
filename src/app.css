@@ -4,8 +4,17 @@
 
 @layer base {
 	html {
-		font-family: 'Mier B', system-ui, sans-serif;
-		scrollbar-color: rgb(14, 116, 144) hsl(var(--secondary));
+		scrollbar-color: rgb(134, 136, 136) hsl(var(--secondary));
+	}
+
+	::-moz-selection {
+		color: hsl(var(--secondary));
+		background: hsl(var(--primary));
+	}
+
+	::selection {
+		color: hsl(var(--secondary));
+		background: hsl(var(--primary));
 	}
 
 	:root {

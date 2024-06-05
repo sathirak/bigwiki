@@ -1,0 +1,1 @@
+<table class="border border-primary table"><slot></slot></table>

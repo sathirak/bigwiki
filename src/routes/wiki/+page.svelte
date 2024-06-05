@@ -2,10 +2,7 @@
 	import { page } from '$src/data/egghead-arc';
 	import { base } from '$src/data/base';
 
-	import ParagraphComp from '$components/markdown/paragraph.svelte';
-	import HeadingComp from '$components/markdown/heading.svelte';
-	import Image from '$components/markdown/image.svelte';
-	import Link from '$components/markdown/link.svelte';
+	import { Renderers } from '$components/markdown';
 
 	import Contents from '$components/wiki/contents.svelte';
 	import MainImage from '$components/wiki/main-image.svelte';
@@ -22,28 +19,31 @@
 		console.log(event.detail.tokens);
 		content = event.detail.tokens;
 	}
+	
 </script>
 
-<main class="flex">
+<svelte:head>
+	<title>{page.main.image.title}</title>
+</svelte:head>
+
+<main class="flex bg-secondary">
 	{#if content}
-		<Contents {content} border={base.body.border}/>
+		<Contents {content} border={base.body.border} />
 	{/if}
-	<div class="flex w-2/3 flex-col gap-6 p-6">
-		<Tags tags={page.tags} border={base.body.border}/>
-		<div class="flex flex-1 border-2" style="border-color: {base.body.border.color};">
-			<MainImage
-				image={page.main.image.image}
-				image_alt={page.main.image.image_alt}
-				title={page.main.image.title}
-			/>
-			<MainInfo info={page.main.info} />
-		</div>
-		<References references={page.references} border={base.body.border}/>
-		<section class=" border-2 bg-secondary px-6 py-6" style="border-color: {base.body.border.color};">
+	<div class="flex w-3/5 flex-col gap-6 p-6">
+		<!-- <Tags tags={page.tags} border={base.body.border}/> -->
+		<MainImage
+			image={page.main.image.image}
+			image_alt={page.main.image.image_alt}
+			title={page.main.image.title}
+		/>
+		<!-- <MainInfo info={page.main.info} /> -->
+		<!-- <References references={page.references} border={base.body.border}/> -->
+		<section class=" bg-secondary px-6 py-6">
 			<SvelteMarkdown
 				source={page.pagesrc}
 				on:parsed={handleParsed}
-				renderers={{ paragraph: ParagraphComp, heading: HeadingComp, image: Image, link: Link }}
+				renderers={Renderers}
 			/>
 		</section>
 	</div>

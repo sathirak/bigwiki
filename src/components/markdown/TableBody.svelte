@@ -1,0 +1,1 @@
+<tbody class="border border-primary"><slot></slot></tbody>

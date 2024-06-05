@@ -1,0 +1,1 @@
+<thead class="border border-primary table-header-group"><slot></slot></thead>

@@ -4,12 +4,15 @@
 	export let title;
 </script>
 
-<h1 class="bg-secondary text-text absolute mt-4 px-4 py-2 text-3xl">
-	{title}
-</h1>
 <img
 	src={image}
 	alt={image_alt}
 	srcset=""
-	class="border-secondary h-80 w-2/3 border-2 object-cover"
+	class=" bottom-0 h-96 w-full border-2 border-secondary object-cover"
 />
+
+<h1
+	class="sticky bottom-0 top-0 z-10 w-full bg-secondary px-4 py-2 text-center font-serif text-4xl text-text"
+>
+	{title}
+</h1>
