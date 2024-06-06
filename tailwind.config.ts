@@ -16,15 +16,15 @@ export default {
 				},
 				text: {
 					DEFAULT: 'hsl(var(--text))',
-					100: '#f5f5f5', // Very light grey
-					200: '#e0e0e0', // Light grey
-					300: '#bdbdbd', // Grey
-					400: '#9e9e9e', // Medium grey
-					500: '#757575', // Dark grey
-					600: '#616161', // Very dark grey
-					700: '#424242', // Almost black
-					800: '#212121', // Darker almost black
-					900: '#000000' // Black
+					100: 'hsl(0, 0%, 96%)',
+					200: 'hsl(0, 0%, 88%)',
+					300: 'hsl(0, 0%, 74%)',
+					400: 'hsl(0, 0%, 62%)',
+					500: 'hsl(0, 0%, 46%)',
+					600: 'hsl(0, 0%, 38%)',
+					700: 'hsl(0, 0%, 26%)',
+					800: 'hsl(0, 0%, 13%)',
+					900: 'hsl(0, 0%, 5%)'
 				},
 
 				destructive: {

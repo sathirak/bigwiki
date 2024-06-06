@@ -1,7 +1,6 @@
 <script>
-
 </script>
 
 <main>
-	HELLO!
+	<a href="/wiki">Redirect</a>
 </main>
