@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+	
 	html {
 		scrollbar-color: rgb(134, 136, 136) hsl(var(--secondary));
 	}

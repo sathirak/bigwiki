@@ -14,7 +14,7 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
-				text: {
+				typo: {
 					DEFAULT: 'hsl(var(--text))',
 					100: 'hsl(0, 0%, 96%)',
 					200: 'hsl(0, 0%, 88%)',

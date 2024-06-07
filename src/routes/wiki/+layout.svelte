@@ -1,5 +1,5 @@
 <script>
-	import { base } from '$src/data/layout';
+	import layout  from '$src/data/layout';
 </script>
 
 <slot></slot>

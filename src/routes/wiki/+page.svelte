@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$src/data/pages/egghead-arc';
-	import { Renderers } from '$components/renderers';
+	import { Renderers } from '$comp/renderers';
 
 	import SvelteMarkdown from 'svelte-markdown';
 </script>

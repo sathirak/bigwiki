@@ -1,4 +1,4 @@
-export const layout = {
+const layout = {
 	base: {
 		title: 'One Piece',
 	},
@@ -30,3 +30,5 @@ export const layout = {
 		]
 	}
 };
+
+export default layout;
