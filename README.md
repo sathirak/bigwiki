@@ -1,3 +1,13 @@
+
+
+<div align="center" height="64" width="64">
+
+<img src="readme/athes-symbol.svg" height="64" width="64">
+
+<img src="readme/athes-type.svg" height="64" width="64">
+
+</div>
+
 # A modern/better open-source software alternative for fandom/mediawiki and documentation
 
 ## Contribution Guide
@@ -26,6 +36,3 @@
 
 - All websites are loaded from DB data (currently can bee seen in the data/ dir), maybe routed through Redis if high traffic
 
-
-
-![Wiki page](Readme/wiki-page.png)
